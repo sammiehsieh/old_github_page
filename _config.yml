@@ -1,0 +1,61 @@
+# Set theme
+remote_theme: daviddarnes/alembic
+
+# File excludes
+exclude:
+- README.md
+- Gemfile
+- Gemfile.lock
+
+# Set plugins
+plugins:
+- jekyll-sitemap
+# reates a sitemap file to help search engines index content
+- jekyll-mentions
+- jekyll-paginate
+- jekyll-seo-tag
+# Adds meta tags to help with SEO
+- jekyll-redirect-from
+- jekyll-default-layout
+- jekyll-feed
+#  Creates an RSS feed for your posts
+- jemoji
+- jekyll-remote-theme
+
+# Site settings
+url: 'https://mydomain.com'
+baseurl: ''
+title: 'My website'
+description: 'This is my new website'
+permalink: pretty
+logo: "https://scontent.ftpe7-2.fna.fbcdn.net/v/t1.0-9/14702305_1234121416609595_6848637014987565111_n.jpg?_nc_cat=109&_nc_oc=AQlcmyBrzsKvtvItWtZ15mfxPPbAWWqOgmPkqSkWZAln5aKlusQRP0HWKX2x9HP3ubk&_nc_ht=scontent.ftpe7-2.fna&oh=85e49a9c6a832e99c9a0275efe9582e3&oe=5DA268A9"
+
+# Pagination
+paginate: 5
+paginate_path: blog/page:num
+
+# Header nav
+navigation_header:
+- title: Home
+  url: /
+- title: About
+  url: /about/
+- title: Blog
+  url: /blog/
+- title: Categories
+  url: /categories/
+
+# Footer nav
+navigation_footer:
+- title: Back to top
+  url: "#top"
+
+# Collections
+collections:
+  posts:
+    title: Posts
+    output: true
+    description: "My thoughts and ideas"
+    feature_text: |
+      Welcome to my blog
+    feature_image: "https://picsum.photos/2560/600?image=866"

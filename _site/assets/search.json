@@ -1,0 +1,54 @@
+
+
+[
+  
+  
+    
+    
+      {
+        "title": "Hello World",
+        "excerpt": "This is my very first blog post. I haven’t written anything yet but I’m sure I have some great stories to tell.\n",
+        "content": "This is my very first blog post. I haven’t written anything yet but I’m sure I have some great stories to tell.\n",
+        "url": "/general/2018/08/22/hello-world/"
+      },
+    
+      {
+        "title": "Markdown testing",
+        "excerpt": "Excerpt means the first paragraph of article which shows on description.\n",
+        "content": "This is heading 1.\nThis is heading 2.\nThis is heading 3.\nThis is heading 4.\nThis is heading 5.\nThis is heading 6.\n\nThis is general word showing.\n\nThis is bold.\nThis is delete.\nThis is italic.\n\n\n  ul tag\n    \n      li tag 1\n      li tag 2\n    \n  \n  Checked\n  Unchecked\n  It has to use CSS to remove bullet points in checkbox.\n\n\n\n\n  Quote: margin -$ px depending on number of quotes\n\n\nThis is a simple word or sentence.\nThese are mutiple sentences, paragraphs, or coding.\nFor example, it can including multiple lines in a block.\n\n\nfunction javascript(argument1, argument2) {\n    console.log('Try javascript in markdown.')\n    return argument1 + argument2\n}\n\n.css {\n    font-size: 2rem;\n    background-color: lightblue;\n}\n\n&lt;div class=\"container\"&gt;\n    &lt;span&gt;This is html.&lt;/span&gt;\n&lt;/div&gt;\n\n\n\n  \n    \n       \n      No.\n      Title\n      Content\n    \n  \n  \n    \n      Text-Align\n      right\n      center\n      default: left\n    \n    \n      -\n      01\n      Title One\n      Contnet One\n    \n    \n      -\n      02\n      Title Two\n      Content Two\n    \n    \n      -\n      03\n      Title Three\n      Content Three\n    \n    \n      -\n      100\n      Title Hundred\n      Content Hundred\n    \n    \n      -\n      1000\n      Title Thousand\n      Content Thousand\n    \n  \n\n",
+        "url": "/general/2019/07/15/Test-Article/"
+      },
+    
+  
+  
+  
+  {
+    "title": "About this website",
+    "excerpt": "\n",
+    "content": "I’m not sure yet what this website is about, but I’m sure I’ll work it out soon.\n",
+    "url": "/about/"
+  },
+  
+  {
+    "title": "Categories",
+    "excerpt": "Category index\n",
+    "content": "\n",
+    "url": "/categories/"
+  },
+  
+  {
+    "title": "Blog",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/blog/"
+  },
+  
+  {
+    "title": "Sammie's Blog",
+    "excerpt": "\n",
+    "content": "There isn’t much going on here yet, but watch this space\n",
+    "url": "/"
+  }
+  
+]
+
