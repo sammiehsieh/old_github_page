@@ -28,7 +28,7 @@ baseurl: ''
 title: "Sammie's Blog"
 description: 'Work hard, play hard :)'
 permalink: pretty
-logo: /assets/logos/rubiks-cube-53.png
+logo: ./assets/logos/rubiks-cube-53.png
 
 # Pagination
 paginate: 5

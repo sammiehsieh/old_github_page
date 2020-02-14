@@ -1,8 +1,8 @@
-const version = '20190716123547';
+const version = '20200214172624';
 const cacheName = `static::${version}`;
 
 const buildContentBlob = () => {
-  return ["/general/2019/07/15/Test-Article/","/general/2018/08/22/hello-world/","/about/","/categories/","/blog/","/","/manifest.json","/assets/search.json","/assets/styles.css","/redirects.json","/feed.xml","/sitemap.xml","/robots.txt","https://scontent.ftpe7-2.fna.fbcdn.net/v/t1.0-9/14702305_1234121416609595_6848637014987565111_n.jpg?_nc_cat=109&_nc_oc=AQlcmyBrzsKvtvItWtZ15mfxPPbAWWqOgmPkqSkWZAln5aKlusQRP0HWKX2x9HP3ubk&_nc_ht=scontent.ftpe7-2.fna&oh=85e49a9c6a832e99c9a0275efe9582e3&oe=5DA268A9", "/assets/default-offline-image.png", "/assets/scripts/fetch.js"
+  return ["/regex/2020/02/05/Regex/","/general/2019/07/15/Test-Article/","/general/2018/08/22/hello-world/","/about/","/categories/","/blog/","/","/manifest.json","/assets/search.json","/assets/styles.css","/redirects.json","/feed.xml","/sitemap.xml","/robots.txt","./assets/logos/rubiks-cube-53.png", "/assets/default-offline-image.png", "/assets/scripts/fetch.js"
   ]
 }
 

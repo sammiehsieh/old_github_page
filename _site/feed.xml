@@ -1,4 +1,545 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-16T12:35:47+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">My website</title><subtitle>This is my new website</subtitle><entry><title type="html">Markdown testing</title><link href="http://localhost:4000/general/2019/07/15/Test-Article/" rel="alternate" type="text/html" title="Markdown testing" /><published>2019-07-15T00:00:00+08:00</published><updated>2019-07-15T00:00:00+08:00</updated><id>http://localhost:4000/general/2019/07/15/Test-Article</id><content type="html" xml:base="http://localhost:4000/general/2019/07/15/Test-Article/">&lt;h1 id=&quot;this-is-heading-1&quot;&gt;This is heading 1.&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-14T17:26:24+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Sammie’s Blog</title><subtitle>Work hard, play hard :)</subtitle><entry><title type="html">Regex | Regular Expression 不用就忘記</title><link href="http://localhost:4000/regex/2020/02/05/Regex/" rel="alternate" type="text/html" title="Regex | Regular Expression 不用就忘記" /><published>2020-02-05T00:00:00+08:00</published><updated>2020-02-05T00:00:00+08:00</updated><id>http://localhost:4000/regex/2020/02/05/Regex</id><content type="html" xml:base="http://localhost:4000/regex/2020/02/05/Regex/">&lt;p&gt;剛開始收到主題的時候想說regex以前老師有講過一點點，但是查了資料才發現根本就忘得差不多了XD&lt;/p&gt;
+
+&lt;p&gt;在這段期間也幾乎都是google一下大家常用的規則，然後就複製貼上再實際測試哪個最符合想要的，沒在管內容長怎樣&lt;/p&gt;
+
+&lt;p&gt;畢竟長&lt;code class=&quot;highlighter-rouge&quot;&gt;/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/&lt;/code&gt;的字串在程式寫正順的時候，沒有人有那個美國時間慢慢查慢慢理解啦!!&lt;/p&gt;
+
+&lt;h3 id=&quot;介紹&quot;&gt;介紹&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;全名 Regular Expression，又稱為正規表達式、正規表示法、規則運算式、常規表示法&lt;/li&gt;
+  &lt;li&gt;是一種語言，也可以說是程式語言 (?)&lt;/li&gt;
+  &lt;li&gt;在數學上是狀態機，在電腦實作中是採用樹狀結構方式實現
+    &lt;ul&gt;
+      &lt;li&gt;狀態機：
+有限個狀態以及在這些狀態之間的轉移和動作等行為的學模型；regex中為判斷接收到的事件是否滿足，如果滿足則移動到下一個狀態，直到整個狀態機滿足為止&lt;/li&gt;
+      &lt;li&gt;樹狀結構：
+有優先順序差異；例如 /(ab+c)* + aca/，當中優先度為 | 大於 +*? 大於 () 大於 [] 大於 abc 大於 range([a-z]) 大於 縮寫(\w) 大於 空白(\s)
+&lt;img src=&quot;https://i.imgur.com/ZCpuizd.png&quot; alt=&quot;img&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;常見使用時機&quot;&gt;常見使用時機&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;比對找出特定的資料是否存在&lt;/li&gt;
+  &lt;li&gt;判定輸入資料的格式是否符合規定&lt;/li&gt;
+  &lt;li&gt;由字串中擷取特定的欄位，如分群比對、解析網頁內容&lt;/li&gt;
+  &lt;li&gt;內容更換&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;工具&quot;&gt;工具&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;網頁開發工具，例如在Chrome的開發人員模式下按 (Windows)&lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl&lt;/code&gt;+&lt;code class=&quot;highlighter-rouge&quot;&gt;Shift&lt;/code&gt;+&lt;code class=&quot;highlighter-rouge&quot;&gt;F&lt;/code&gt; (mac)&lt;code class=&quot;highlighter-rouge&quot;&gt;Alt&lt;/code&gt;+&lt;code class=&quot;highlighter-rouge&quot;&gt;Command&lt;/code&gt;+&lt;code class=&quot;highlighter-rouge&quot;&gt;I&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;IDE當中，例如Visual Studio Code的搜尋功能&lt;/li&gt;
+  &lt;li&gt;文件檔案當中，例如Google文件的搜尋功能&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;playground&quot;&gt;Playground&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Regex101 &lt;a href=&quot;https://regex101.com/&quot; target=&quot;_blank&quot;&gt;https://regex101.com/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;RegEx Testing &lt;a href=&quot;https://www.regextester.com/&quot; target=&quot;_blank&quot;&gt;https://www.regextester.com/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Debuggex: Online visual regex tester. JavaScript, Python, and PCRE. &lt;a href=&quot;https://www.debuggex.com/&quot; target=&quot;_blank&quot;&gt;https://www.debuggex.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;library&quot;&gt;Library&lt;/h4&gt;
+
+&lt;p&gt;Regular Expression Library &lt;a href=&quot;http://regexlib.com/Default.aspx&quot; target=&quot;_blank&quot;&gt;http://regexlib.com/Default.aspx&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;語法&quot;&gt;語法&lt;/h3&gt;
+
+&lt;h4 id=&quot;character-classes字元類別&quot;&gt;Character Classes(字元類別)&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a：英文字母 a 這個字元，大小寫有區分
+0：數字 0 這個字元
+.：任意字元
+-：字元集合，用來指定字源的區間，必須包在中括號裡面
+
+[]：括號內的任何字元
+[^]：不在括號內的任何字元
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;RegExp&lt;/th&gt;
+      &lt;th&gt;說明&lt;/th&gt;
+      &lt;th&gt;範例&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/a/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;含有字母 a 的字串&lt;/td&gt;
+      &lt;td&gt;“a”,”apple”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/./&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;含有任意字元的字串&lt;/td&gt;
+      &lt;td&gt;“aaa”,”a”,”嗨”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/a./&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;含有字母 a 後面接一個任意字元的字串&lt;/td&gt;
+      &lt;td&gt;“aaa”,”apple”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/^[aeiou]/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;開頭是小寫母音的字串&lt;/td&gt;
+      &lt;td&gt;“apple”,”oh”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/[^aeiouAEIOU]$/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;結尾不是母音的字串&lt;/td&gt;
+      &lt;td&gt;“Larry”,”ok”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/^[aeiou]{3}$/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;三個小寫母音組成的字串&lt;/td&gt;
+      &lt;td&gt;“aaa”,”aeu”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/^[^aeiou]*$/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;不包含小寫母音的字串&lt;/td&gt;
+      &lt;td&gt;“hEllO”,”ApplE”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/[0-9]/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;含數字的字串&lt;/td&gt;
+      &lt;td&gt;“app1e”,”123”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/[a-z]/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;含小寫字母的字串&lt;/td&gt;
+      &lt;td&gt;“12a45”,”aaa”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/^[^a-zA-Z]$/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;不含英文字母的字串&lt;/td&gt;
+      &lt;td&gt;“123”,”345”&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h5 id=&quot;特殊字元&quot;&gt;特殊字元&lt;/h5&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;\.：表示 . 這個字元，但是不能寫成 /./ 會被判斷成任意字元
+\+：表示 + 這個字元，類似的還有 \? \*
+\(：表示 ( 這個字元，類似的還有 \) \[ \]
+\\：表示 \ 這個字元
+
+\d：任何數字的字元，等同 [0-9]
+\D：任何非數字的字元，等同 [^0-9]
+\w：任何數字字母底線，等同 [A-Za-z0-9_]
+\W：任何非數字字母底線，等同 [^A-Za-z0-9_]
+\s：任何空白字元(空白/換行/tab)，等同 [ \f\n\r\t\v]
+\S：任何非空白字元(空白/換行/tab)，等同 [^ \f\n\r\t\v]
+
+\f：form feed 換頁
+\n：line feed 換行
+\r：carriage return 回列首
+\t：tab 制表符
+\v：vertical tab 垂直制表符
+# Windows text files use &quot;\r\n&quot; to terminate lines, while Unix test files use &quot;\n&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;RegExp&lt;/th&gt;
+      &lt;th&gt;說明&lt;/th&gt;
+      &lt;th&gt;範例&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/^\d{4}-\d{2}-\d{2}$/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;西元生日格式&lt;/td&gt;
+      &lt;td&gt;“1996-08-06”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/^[A-Z]\d{9}$/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;身分證字號&lt;/td&gt;
+      &lt;td&gt;“A123456789”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/^09\d{8}$/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;手機號碼&lt;/td&gt;
+      &lt;td&gt;“0912345678”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/^[^aeiou]*$/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;不包含小寫母音的字串&lt;/td&gt;
+      &lt;td&gt;“hEllO”,”ApplE”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/^.*@gmail\.com$/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;gmail 信箱&lt;/td&gt;
+      &lt;td&gt;“test@gmail.com”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/^[0-9\+\-\*\/]*$/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;四則運算算式&lt;/td&gt;
+      &lt;td&gt;“1+2*3”&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;repetition重複次數&quot;&gt;Repetition(重複次數)&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*：出現 0 次以上
+?：出現 0 次或 1 次，可有可無的意思
++：出現 1 次以上
+  
+{n}：出現 n 次
+{n,}：出現 n 次以上
+{,n}：出現 n 次以下
+{n,k}：出現 n 次到 k 次
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;RegExp&lt;/th&gt;
+      &lt;th&gt;說明&lt;/th&gt;
+      &lt;th&gt;範例&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/a*/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;包含 0 次以上的 a&lt;/td&gt;
+      &lt;td&gt;“apple”,”hello”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/ab*/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;包含一個 a，後面至少 0 個 b&lt;/td&gt;
+      &lt;td&gt;“a”,”ab”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/ab?/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;包含空字串或一個 a&lt;/td&gt;
+      &lt;td&gt;“a”,”ab”,”app”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/123a+/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;包含 123 後面有一個以上的 a&lt;/td&gt;
+      &lt;td&gt;“123a”,”123app”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/123a{1,2}/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;包含 123 後面出現一個或兩個 a&lt;/td&gt;
+      &lt;td&gt;“1123a”,”123aaa”&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;flag旗標&quot;&gt;Flag(旗標)&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;g：global search，比對字串中所有符合的配對，否則只找一個
+i：case-insensitive search，規則不區分大小寫
+m：multi-line search，多行比對，^比對美行開頭，$比對每行結尾
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;RegExp&lt;/th&gt;
+      &lt;th&gt;說明&lt;/th&gt;
+      &lt;th&gt;範例&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/xyz[0-9]/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;第一組xyz開頭後接數字&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;xyz1&lt;/strong&gt;23xyz456&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/xyz[0-9]/g&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;全部xyz開頭後接數字&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;xyz1&lt;/strong&gt;23&lt;strong&gt;xyz4&lt;/strong&gt;56&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/xyz[0-9]/ig&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;全部xyz開頭後接數字且不區分大小寫&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;xyz1&lt;/strong&gt;23&lt;strong&gt;XYZ4&lt;/strong&gt;56&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;anchoring-metacharacters錨點元字符設定規則邊界&quot;&gt;Anchoring Metacharacters(錨點元字符)：設定規則邊界&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;^：字串開頭
+$：字串結尾
+
+\b：比對字串邊界非一般字元
+\B：比對字串邊界為非一般字元
+
+# 以下在 Javascript 中無支援
+\A：出現於整個字串的開頭，且不受多行模式的影響
+\Z：出現於整個字串的結尾，後方可接一個\n，且不受多行模式的影響
+\z：出現於整個字串的結尾，後方不可接任何字元，且不受多行模式影響
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;RegExp&lt;/th&gt;
+      &lt;th&gt;說明&lt;/th&gt;
+      &lt;th&gt;範例&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/^app/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;開頭是 app 的字串&lt;/td&gt;
+      &lt;td&gt;“app”,”apple”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/ry$/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;結尾是 ry 的字串&lt;/td&gt;
+      &lt;td&gt;“Larry”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/^abcd$/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;開頭結尾中間只有 abcd 的字串&lt;/td&gt;
+      &lt;td&gt;“abcd”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/^La.*le$/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;開頭是 La 尾巴是 le 的字串&lt;/td&gt;
+      &lt;td&gt;“Larry loves apple”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/\bgo\b/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;邊界不是一般字元或底線的詞&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;go&lt;/strong&gt; go_goyago.&lt;strong&gt;go&lt;/strong&gt;.&lt;strong&gt;go&lt;/strong&gt;-&lt;strong&gt;go&lt;/strong&gt;-&lt;strong&gt;go&lt;/strong&gt;.&lt;strong&gt;go&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/\Bgo\B/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;邊界是一般字元或底線的詞&lt;/td&gt;
+      &lt;td&gt;go go_&lt;strong&gt;go&lt;/strong&gt;yago.go.go-go-go.go&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h5 id=&quot;lookahead往前看右合樣lookbehind往後看左合樣&quot;&gt;lookahead(往前看/右合樣)、lookbehind(往後看/左合樣)&lt;/h5&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(?=)：Positive lookahead 代表「往前看是」的意思，後面接上字元
+(?!)：Negative lookahead 代表「往前看不是」的意思，後面接上字元
+
+# 以下不支援 IE, Edge, Firefox, Safari
+(?&amp;lt;=)：Positive lookbehind 代表「往後看是」的意思，前面接上字元
+(?&amp;lt;!)：Negative lookbehind 代表「往後看不是」的意思，前面接上字元
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;RegExp&lt;/th&gt;
+      &lt;th&gt;說明&lt;/th&gt;
+      &lt;th&gt;範例&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/\d(?=[AB])/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;找有A或B接在後面的「數字」，等同於數字後面有A或B&lt;/td&gt;
+      &lt;td&gt;12&lt;strong&gt;3&lt;/strong&gt;A4&lt;strong&gt;5&lt;/strong&gt;B6&lt;strong&gt;7&lt;/strong&gt;AB&lt;strong&gt;8&lt;/strong&gt;A&lt;strong&gt;0&lt;/strong&gt;B&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/\d(?![AB])/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;找沒有A或B接在後面的「數字」，等同於數字後面沒有A或B&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;12&lt;/strong&gt;3A&lt;strong&gt;4&lt;/strong&gt;5B&lt;strong&gt;6&lt;/strong&gt;7AC&lt;strong&gt;8&lt;/strong&gt;E0B&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/(?&amp;lt;=[OP])./&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;找有O或P接在前面的「任何字元」，等同於字元前面有O或P&lt;/td&gt;
+      &lt;td&gt;AO&lt;strong&gt;E&lt;/strong&gt;P&lt;strong&gt;S&lt;/strong&gt;O&lt;strong&gt;F&lt;/strong&gt;P&lt;strong&gt;OPV&lt;/strong&gt;FO&lt;strong&gt;P&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/(?&amp;lt;![OP])./&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;找沒有O或P接在前面的「任何字元」，等同於字元前面沒有O或P&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;AO&lt;/strong&gt;E&lt;strong&gt;P&lt;/strong&gt;S&lt;strong&gt;O&lt;/strong&gt;F&lt;strong&gt;P&lt;/strong&gt;OPV&lt;strong&gt;FO&lt;/strong&gt;P&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;alternation交替grouping群組&quot;&gt;Alternation(交替)、Grouping(群組)&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;|：代表「或」的意思
+()：代表「群組」的意思
+
+# 以下不支援 IE, Edge, Firefox
+?&amp;lt;GROUPNAME&amp;gt;：代表「群組命名」的意思
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;RegExp&lt;/th&gt;
+      &lt;th&gt;說明&lt;/th&gt;
+      &lt;th&gt;範例&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/cat|dog/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;貓或狗&lt;/td&gt;
+      &lt;td&gt;“cat”,”dog”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/I like cat|dog/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;我喜歡貓或狗&lt;/td&gt;
+      &lt;td&gt;“I like cat”,”dog”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/I like (cat|dog)/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;我喜歡貓或我喜歡狗&lt;/td&gt;
+      &lt;td&gt;“I love cat”,”I love dog”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/Pet(Hamster)?/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;寵物鼠&lt;/td&gt;
+      &lt;td&gt;“Pet”,”PetHamster”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/(?&amp;lt;pet&amp;gt;cat|dog|hamster)/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;寵物包含貓、狗、老鼠&lt;/td&gt;
+      &lt;td&gt;“cat”,”dog”,”hamster”&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;greedy窮盡lazy最少&quot;&gt;Greedy(窮盡)、Lazy(最少)&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Greedy 盡可能多地從每次出現的特定模式進行比對，可以說是匹配優先
+*：greedy 窮盡比對零或多次，類似的還有 + ? {n} {n,} {n,k}
+
+# Non-greedy(Lazy) 比對的項目愈少愈好，可以說是忽略優先
+*?：non-greedy(lazy) 非窮盡比對零或多次 +? ?? {n}? {n,}? {n,k}?
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;RegExp&lt;/th&gt;
+      &lt;th&gt;說明&lt;/th&gt;
+      &lt;th&gt;範例&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/A.*Z/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;A開頭Z結尾的大字串&lt;/td&gt;
+      &lt;td&gt;eee&lt;strong&gt;AiiZuuuuAoooZ&lt;/strong&gt;eeee&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/A.*?Z/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;A開頭Z結尾的切割小字串&lt;/td&gt;
+      &lt;td&gt;eee&lt;strong&gt;AiiZ&lt;/strong&gt;uuuu&lt;strong&gt;AoooZ&lt;/strong&gt;eeee&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;練習題&quot;&gt;練習題&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;身分證字號，如&lt;code class=&quot;highlighter-rouge&quot;&gt;F123456789&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Email，如&lt;code class=&quot;highlighter-rouge&quot;&gt;happy123@gmail.com&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;電話，如&lt;code class=&quot;highlighter-rouge&quot;&gt;+886-912-345-678&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;HTML格式，如所有的&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;tag&amp;gt;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;檔案名稱，如&lt;code class=&quot;highlighter-rouge&quot;&gt;.jpg&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;.gif&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;在程式中使用&quot;&gt;在程式中使用&lt;/h3&gt;
+
+&lt;h4 id=&quot;java&quot;&gt;Java&lt;/h4&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Example&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pattern&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;^[0-9]{4}-[0-9]{2}-[0-9]{2}$&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;1996-08-06&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;matches&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pattern&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)){&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// do Something&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;javascript&quot;&gt;JavaScript&lt;/h4&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pattern&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;RegExp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;[A-Z]&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;d{9}&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// let pattern = /[A-Z]\d{9}/&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;F123456789&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pattern&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// do something&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;html-5&quot;&gt;Html 5&lt;/h4&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;form&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mobile&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mobile&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;pattern=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;^09\d{2}-\d{3}-\d{3}&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;alert pattern wrong&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;補充&quot;&gt;補充&lt;/h3&gt;
+
+&lt;h4 id=&quot;狀態機表現&quot;&gt;狀態機表現&lt;/h4&gt;
+
+&lt;h5 id=&quot;字母數字&quot;&gt;字母、數字&lt;/h5&gt;
+
+&lt;p&gt;以 &lt;a href=&quot;https://regex101.com/r/P1pSz4/26&quot;&gt;/gmail/&lt;/a&gt; 作為規則為例，其實是從 g-m-a-i-l 找到前一個字母後繼續向右找&lt;br /&gt;
+&lt;img src=&quot;https://imgur.com/4tcPjHW.png&quot; alt=&quot;/gmail/&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;集合&quot;&gt;集合&lt;/h5&gt;
+
+&lt;p&gt;以 &lt;a href=&quot;https://regex101.com/r/P1pSz4/26&quot;&gt;/[aeiou]/&lt;/a&gt; 作為規則，則是嘗試 a|e|i|o|u 由上往下找&lt;br /&gt;
+&lt;img src=&quot;https://imgur.com/N9B1B8K.png&quot; alt=&quot;h[aeiou]ng&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;重複次數---&quot;&gt;重複次數：? /* /+ /{}&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;?：以 &lt;a href=&quot;https://regex101.com/r/P1pSz4/31&quot;&gt;/https?/&lt;/a&gt; 作為規則&lt;br /&gt;
+&lt;img src=&quot;https://imgur.com/xF2LXku.png&quot; alt=&quot;https?&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;*：以 &lt;a href=&quot;https://regex101.com/r/P1pSz4/32&quot;&gt;/\d*.a../&lt;/a&gt; 作為規則&lt;br /&gt;
+&lt;img src=&quot;https://i.imgur.com/6uBoUdJl.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;+：以 &lt;a href=&quot;https://regex101.com/r/P1pSz4/33&quot;&gt;/\d+.a../&lt;/a&gt; 作為規則&lt;br /&gt;
+&lt;img src=&quot;https://imgur.com/BlKiENil.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;{n}：以 &lt;a href=&quot;https://regex101.com/r/P1pSz4/34&quot;&gt;/(bra){3}/&lt;/a&gt; 作為規則&lt;br /&gt;
+&lt;img src=&quot;https://imgur.com/EopAZXNm.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;錨點字元符&quot;&gt;錨點字元符&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;以 &lt;a href=&quot;https://regex101.com/r/P1pSz4/22&quot;&gt;/a.*t/&lt;/a&gt; 作為規則&lt;br /&gt;
+&lt;img src=&quot;https://imgur.com/T8nNFlnm.png&quot; alt=&quot;/a+/&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;以 &lt;a href=&quot;https://regex101.com/r/P1pSz4/23&quot;&gt;/a.*?t/&lt;/a&gt; 作為規則&lt;br /&gt;
+&lt;img src=&quot;https://imgur.com/gtKs2yPm.png&quot; alt=&quot;img&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;其他&quot;&gt;其他：|&lt;/h5&gt;
+
+&lt;p&gt;以 &lt;a href=&quot;https://regex101.com/r/P1pSz4/36&quot;&gt;/cat|dog/&lt;/a&gt; 作為規則&lt;br /&gt;
+&lt;img src=&quot;https://imgur.com/qEcTfWEm.png&quot; alt=&quot;cat|dog&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;學習資源&quot;&gt;學習資源&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://larry850806.github.io/2016/06/23/regex/&quot; target=&quot;_blank&quot;&gt;[實用] 用 Regular Expression 做字串比對 · Larry&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hengxiuxu.blogspot.com/2017/10/regular-expression.html&quot; target=&quot;_blank&quot;&gt;[Regular Expression]正規表達式教學，使用狀態機輔助說明-基礎篇&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://darkk6.blogspot.com/2017/03/regexp-lookahead-lookbehind.html&quot; target=&quot;_blank&quot;&gt;無聊技術研究: RegExp 應用： lookahead , lookbehind&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dezchuang.github.io/2017/07/12/023_regexp_2/&quot; target=&quot;_blank&quot;&gt;筆記｜Javascript正規表達式#2 - 基本語法 - Dez.tw&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.miniasp.com/post/2008/03/23/Regular-Expression-Regex-Learning-Resources&quot; target=&quot;_blank&quot;&gt;整理一些 Regex 的學習資源 | The Will Will Web&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.miniasp.com/post/2010/03/07/JavaScript-Regular-Expression-Positive-Lookahead-Trap&quot; target=&quot;_blank&quot;&gt;使用 Regular Expression 驗證密碼：使用 JavaScript 的陷阱 | The Will Will Web&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">剛開始收到主題的時候想說regex以前老師有講過一點點，但是查了資料才發現根本就忘得差不多了XD</summary></entry><entry><title type="html">Markdown testing</title><link href="http://localhost:4000/general/2019/07/15/Test-Article/" rel="alternate" type="text/html" title="Markdown testing" /><published>2019-07-15T00:00:00+08:00</published><updated>2019-07-15T00:00:00+08:00</updated><id>http://localhost:4000/general/2019/07/15/Test-Article</id><content type="html" xml:base="http://localhost:4000/general/2019/07/15/Test-Article/">&lt;h1 id=&quot;this-is-heading-1&quot;&gt;This is heading 1.&lt;/h1&gt;
 &lt;h2 id=&quot;this-is-heading-2&quot;&gt;This is heading 2.&lt;/h2&gt;
 &lt;h3 id=&quot;this-is-heading-3&quot;&gt;This is heading 3.&lt;/h3&gt;
 &lt;h4 id=&quot;this-is-heading-4&quot;&gt;This is heading 4.&lt;/h4&gt;
