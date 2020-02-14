@@ -23,12 +23,12 @@ plugins:
 - jekyll-remote-theme
 
 # Site settings
-url: 'https://mydomain.com'
+url: 'https://sammiehsieh.github.io/'
 baseurl: ''
-title: 'My website'
-description: 'This is my new website'
+title: "Sammie's Blog"
+description: 'Work hard, play hard :)'
 permalink: pretty
-logo: "https://scontent.ftpe7-2.fna.fbcdn.net/v/t1.0-9/14702305_1234121416609595_6848637014987565111_n.jpg?_nc_cat=109&_nc_oc=AQlcmyBrzsKvtvItWtZ15mfxPPbAWWqOgmPkqSkWZAln5aKlusQRP0HWKX2x9HP3ubk&_nc_ht=scontent.ftpe7-2.fna&oh=85e49a9c6a832e99c9a0275efe9582e3&oe=5DA268A9"
+logo: /assets/logos/rubiks-cube-53.png
 
 # Pagination
 paginate: 5
