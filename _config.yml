@@ -28,7 +28,7 @@ baseurl: ''
 title: "Sammie's Blog"
 description: 'Work hard, play hard :)'
 permalink: pretty
-logo: ./assets/logos/rubiks-cube-53.png
+logo: 'https://image.flaticon.com/icons/svg/1330/1330927.svg'
 
 # Pagination
 paginate: 5

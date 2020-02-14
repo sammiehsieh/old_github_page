@@ -1,8 +1,8 @@
-const version = '20200214172624';
+const version = '20200214175237';
 const cacheName = `static::${version}`;
 
 const buildContentBlob = () => {
-  return ["/regex/2020/02/05/Regex/","/general/2019/07/15/Test-Article/","/general/2018/08/22/hello-world/","/about/","/categories/","/blog/","/","/manifest.json","/assets/search.json","/assets/styles.css","/redirects.json","/feed.xml","/sitemap.xml","/robots.txt","./assets/logos/rubiks-cube-53.png", "/assets/default-offline-image.png", "/assets/scripts/fetch.js"
+  return ["/regex/2020/02/05/Regex/","/general/2019/07/15/Test-Article/","/general/2018/08/22/hello-world/","/about/","/categories/","/blog/","/","/manifest.json","/assets/search.json","/assets/styles.css","/redirects.json","/feed.xml","/sitemap.xml","/robots.txt","https://image.flaticon.com/icons/svg/1330/1330927.svg", "/assets/default-offline-image.png", "/assets/scripts/fetch.js"
   ]
 }
 
