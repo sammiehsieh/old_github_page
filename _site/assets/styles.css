@@ -219,7 +219,7 @@ button,
 input,
 select,
 textarea {
-  font: inherit;
+  font: "Noto Sans TC", inherit;
   /* 1 */
   margin: 0;
   /* 2 */ }
@@ -362,7 +362,7 @@ textarea {
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   /* 1 */
-  font: inherit;
+  font: "Noto Sans TC", inherit;
   /* 2 */ }
 
 * {
