@@ -3,9 +3,9 @@
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Merriweather:400,700");
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
 html {
-  font-family: "微軟正黑體" !important;
+  font-family: 'Noto Sans TC', sans-serif;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -219,7 +219,7 @@ button,
 input,
 select,
 textarea {
-  font: "微軟正黑體" !important;
+  font: "Noto Sans TC" !important;
   /* 1 */
   margin: 0;
   /* 2 */ }
@@ -362,7 +362,7 @@ textarea {
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   /* 1 */
-  font: "微軟正黑體" !important;
+  font: "Noto Sans TC" !important;
   /* 2 */ }
 
 * {
@@ -373,7 +373,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: "微軟正黑體" !important;
+  font: "Noto Sans TC" !important;
   vertical-align: baseline; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -420,7 +420,7 @@ html {
 
 body {
   font-size: 1.3333333333rem;
-  font-family: "微軟正黑體" !important;
+  font-family: "Noto Sans TC" !important;
   font-style: normal;
   font-weight: 400;
   line-height: 2rem; }
@@ -476,7 +476,7 @@ a {
       padding-top: 0.5657994737rem; } }
 .typeset h1, .typeset h2, .typeset h3, .typeset h4, .typeset h5, .typeset h6 {
   color: #242e2b;
-  font-family: "微軟正黑體" !important;
+  font-family: "Noto Sans TC" !important;
   font-feature-settings: 'dlig', 'liga', 'lnum', 'kern';
   font-style: normal;
   font-weight: 700; }
@@ -722,7 +722,7 @@ a {
   font-size: 1.1916666667rem;
   margin-bottom: -0.553135rem;
   padding-top: 0.553135rem;
-  font-family: "微軟正黑體" !important;
+  font-family: "Noto Sans TC" !important;
   font-feature-settings: 'liga', 'lnum', 'tnum', 'kern';
   font-style: normal;
   font-weight: 400;
@@ -779,7 +779,7 @@ a {
   font-style: italic; }
 .typeset small, .typeset .caption {
   font-size: 1.0666666667rem;
-  font-family: "微軟正黑體" !important;
+  font-family: "Noto Sans TC" !important;
   font-style: normal;
   font-weight: 400; }
   @media screen and (min-width: 40em) {
